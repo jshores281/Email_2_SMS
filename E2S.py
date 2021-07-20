@@ -4,17 +4,34 @@
 
 import smtplib
 
-EMAIL_SENDER = input("enter your email: ")
-EMAIL_SENDER_PASSWORD = input("enter your email password: ")
-RECV_PHONE = input("enter phone number sms address: ")
-SUBJECT = input("enter subject of message: ") 
-BODY = input("enter message: ")
+
+
+EMAIL_SENDER = input("EMAIL: ")
+EMAIL_PASSWORD = input("PASSWORD: ")
+EMAIL_SRVR = input("SMTP SERVER: ")
+EMAIL_PORT = input("SMTP SERVER PORT: ")
+RECV_PHONE = input("CELL PHONE NUMBER: ")
+SMS_GATE = input("SMS-GATEWAY: ")
+SUBJECT = input("title of sms: ")
+BODY = input("type message: ")
 
 EMAIL_ADDR = EMAIL_SENDER
-EMAIL_PASS = EMAIL_SENDER_PASSWORD
-RECV_ADDR = RECV_PHONE
+EMAIL_PASS = EMAIL_PASSWORD
+RECV_ADDR = RECV_PHONE + SMS_GATE
 SUBJECT = SUBJECT
 BODY = BODY
+
+print("\n", "PRESS ENTER IF CORRECT OR CTRL+C", "\n"*2,
+	"EMAIL = %s" % EMAIL_ADDR,"\n",
+	"PASSWORD = %s" % EMAIL_PASS,"\n",
+	"SERVER = %s" % EMAIL_SRVR,"\n",
+	"PORT = %s" % EMAIL_PORT,"\n",
+	"PHONE & SMS-GATEWAY = %s" % RECV_ADDR,"\n"*2,
+      	"TITLE = %s" % SUBJECT,'\n',
+      	"MESSAGE = %s" % BODY,'\n\)
+
+
+input()
 
 
 # email to sms function
