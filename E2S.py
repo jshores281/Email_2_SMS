@@ -1,4 +1,3 @@
-#! Python 3.9.4/E2S.py
 # email to sms #
 # secured with tls
 
